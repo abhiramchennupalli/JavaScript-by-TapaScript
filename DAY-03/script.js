@@ -31,5 +31,4 @@ console.log(ctc_salary);
 
 //  Create a color variable.
 //  Based on the color variable's 
-//  value print in the console if a traveller needs to STOP or GO. The Red color is for STOP and the Green color is for GO.
-
+//  value print in the console if a traveller needs to STOP or GO. The Red color is for STOP and the Green color is for G
