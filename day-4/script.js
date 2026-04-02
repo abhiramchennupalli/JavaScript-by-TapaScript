@@ -216,5 +216,3 @@ switch (birthMonth) {
     default:
         console.log("Invalid month");
 }
-
-
