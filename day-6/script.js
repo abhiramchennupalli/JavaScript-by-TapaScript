@@ -110,8 +110,13 @@ function abhi(value) {
 
 function ruchitha() {
     console.log("Ravuri Naga Ruchitha");
-    return ;
+    return;
 }
 
 abhi(ruchitha);
 
+let naming = () => {
+    console.log("Hello world");
+}
+
+naming();
