@@ -120,3 +120,16 @@ let naming = () => {
 }
 
 naming();
+
+{
+    function myFunction(a, value) {
+        console.log('Main Function',a);
+        console.log(value());
+    }
+
+
+
+    myFunction(3, () => console.log("This is call back function"));
+
+
+}
