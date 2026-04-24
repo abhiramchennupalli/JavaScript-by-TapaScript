@@ -204,8 +204,182 @@ console.log("Hello world this is array revision");
     // if nothing is mention it takes , . array changed to text
     const arr1 = [1, 2, 3, 4, 5];
     console.log(arr1.join(' <-> ')); //1 <-> 2 <-> 3 <-> 4 <-> 5
-    
+
 }
 {
+    //fill() method, immutable 
+    const colors = ['red', 'green', 'yellow'];
+    const newColors = colors.fill('blue', 1, 2);
+    console.log(newColors);
+}
+
+{
+    //include()
+    const colors = ['red', 'green', 'yellow'];
+    console.log(colors.includes('yellow'));
+}
+
+{
+    //indexOf() method is used to index of elements in a array. If elements is not present in the array it returns -1;
+    const colors = ['red', 'green', 'yellow'];
+    console.log(colors.indexOf('yellow'));
+}
+
+{
+
+    //reverse() method is used to reverse the elements in the array;
+    const colors = ['red', 'green', 'yellow'];
+    console.log(colors.reverse('blue'));
+}
+
+{
+    const colors = ['red', 'green', 'yellow'];
+    console.log(colors.sort())
+
+    //if we want to sort in decending order , we can use reverse method
+}
+
+{
+    //splice() method 
+    //syntax: array.splice(start,deleteCount,(item1,item2 etc))
+    const colors = ['red', 'green', 'yellow', 'blue', 'white'];
+
+    const splicedArray = colors.splice(1, 1, 'aqua', 'light blue');
+    console.log(splicedArray);
+    console.log(colors);
+
+    //arr.splice(2,4,"avhi","ram","chennupalli");parameters lo 1st di index value , 
+    // and delect starting position, 2nd di enni elements delect cheyali ani , next 
+    // add chese vi anni array ki add chestunna elements
+
+    //splice always returns array containing delected elements....
+
+}
+
+{
+    //at() method is used to check index values from negitive side also
+
+    const colors = ['red', 'aqua', 'light blue', 'yellow', 'blue', 'white'];
+    console.log(typeof (colors))
+
+    console.log(colors.at(-2)); //blue, output as string , negitive use cheyachu
+}
+
+{
+
+    let customers = [
+        {
+            id: 1,
+            f_name: "Abby",
+            l_name: "Thomas",
+            gender: "M",
+            married: true,
+            age: 32,
+            expense: 500,
+            purchased: ["Shampoo", "Toys", "Book"],
+        },
+
+
+        {
+            id: 2,
+            f_name: "Jerry",
+            l_name: "Tom",
+            gender: "M",
+            married: true,
+            age: 64,
+            expense: 100,
+            purchased: ["Stick", "Blade"],
+        },
+
+        {
+            id: 3,
+            f_name: "Dianna",
+            l_name: "Cherry",
+            gender: "F",
+            married: true,
+            age: 22,
+            expense: 1500,
+            purchased: ["Lipstik", "Nail Polish", "Bag", "Book"],
+        },
+
+        {
+            id: 4,
+            f_name: "Dev",
+            l_name: "Currian",
+            gender: "M",
+            married: true,
+            age: 82,
+            expense: 90,
+            purchased: ["Book"],
+        },
+
+        {
+            id: 5,
+            f_name: "Maria",
+            l_name: "Gomes",
+            gender: "F",
+            married: false,
+            age: 7,
+            expense: 300,
+            purchased: ["Toys"],
+        },
+    ];
+
+    console.log(customers[2]);
+
+    //filter method
+
+    const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+    const evenNumbers = numbers.filter(isEven);
+    const oddNumbers = numbers.filter(isOdd);
+
+    function isEven(number) {
+        return (number % 2 === 0)
+    };
+
+    function isOdd(number) {
+        return number % 2 === 1;
+    }
+    console.log(evenNumbers);
+    console.log(oddNumbers);
+
+    const elder = customers.filter(isAdult);
+
+    function isAdult(customer) {
+        return customer.age >= 60;
+    }
+    console.log(elder)
+
+    const bookBuy = customers.filter(boughtBook);
+
+    function boughtBook(customer) {
+        return (customer.purchased.includes("Book"));
+    }
+    //i did mistake previsouly that i used ==="book ", but it is wrong , and correct method is , it is a array, so 
+    //we need to find wheater the element is present in the array or not
+
+    console.log(bookBuy);
+
+    const genderCheck = customers.filter(isMale)
+
+    function isMale(customer) {
+        return customer.gender == "M";
+    }
+    console.log(genderCheck);
+
+
+    //arrow function , function argunment e inner lo return avvali
+    const isFemale = customers.filter((isFemale) => {
+        return isFemale.gender == "F"
+    });
+    console.log(isFemale);
+
+
+    //----
+
+
+
+    //map()method 
     
 }
+
