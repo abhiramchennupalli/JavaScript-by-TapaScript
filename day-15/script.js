@@ -380,6 +380,35 @@ console.log("Hello world this is array revision");
 
 
     //map()method 
-    
+
 }
 
+{
+    const name = document.getElementById('head');
+    console.log(name);
+}
+
+{
+    const name = document.querySelectorAll('#head');
+    console.log(name);
+}
+{
+    const listName = document.getElementsByClassName("unorder-list");
+    const array = [...listName];
+    console.log(listName);
+    console.log(array);
+    array.forEach((elem) => {
+        console.log(elem);
+    })
+    const collectionPromise = Array.fromAsync(document.getElementsByClassName('unorder-list'));
+
+
+}
+
+{
+    function con() {
+        console.log("Button Clicked!");
+
+        
+    }
+}
