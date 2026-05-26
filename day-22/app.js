@@ -18,9 +18,61 @@ console.log('This is callback asynchronous JS');
 }
 
 {
-    function wish (name){
+    function wish(name) {
         console.log(`hello ${name}`);
     }
 
-    
+
+}
+{
+
+    let greet = (name) => {
+        console.log("Hello abhi!", name);
+    }
+
+    let greeting = () => {
+        console.log("Ones again hello abhi!");
+    }
+    greet(greeting());
+
+}
+
+
+
+
+
+
+{
+    function greet(name) {
+        console.log("hello" + name);
+    }
+
+    function processUser(callback) {
+        callback('Abhiram');
+    }
+
+    processUser(greet);
+}
+
+{
+
+    function greet(name) {
+        console.log(`hello ${name}`);
+    }
+
+    function userName(username) {
+        username("Abhiram");
+    }
+
+    userName(greet);
+
+}
+
+{
+
+
+
+
+
+
 }
