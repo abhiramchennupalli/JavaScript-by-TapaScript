@@ -1,0 +1,8 @@
+.arrow {
+  transition: transform 0.25s ease;
+  transform-origin: center;
+}
+
+.nav-btn:hover .arrow {
+  transform: rotate(180deg);
+}
